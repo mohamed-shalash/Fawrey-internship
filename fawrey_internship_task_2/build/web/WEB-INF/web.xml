@@ -12,9 +12,49 @@
             <param-value>mas</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>Add</servlet-name>
+        <servlet-class>Servelet.Add</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAll</servlet-name>
+        <servlet-class>Servelet.GetAll</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Update</servlet-name>
+        <servlet-class>Servelet.Update</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>Servelet.Delete</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Getjsp</servlet-name>
+        <servlet-class>Getjsp</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Product</servlet-name>
         <url-pattern>/products</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAll</servlet-name>
+        <url-pattern>/getall</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Update</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Getjsp</servlet-name>
+        <url-pattern>/show</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

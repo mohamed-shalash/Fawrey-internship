@@ -17,46 +17,36 @@
     </head>
     <body>
     <div class="container">
-        <h1>Product List</h1>
-        <%! ProductManeger pm =ProductManeger.Getinstance(); %>
-           
-            
-            <% 
-        CopyOnWriteArrayList<Product> products =pm.GetAll();
-        System.out.println(""+products.size());
-        for (int i = 0; i < products.size(); i++) { %>
-        <ul id="">
-            <li><%= products.get(i).getId() %> : 
-                <%= products.get(i).getName()%> :
-                <%= products.get(i).getDescription()%> :
-                <%= products.get(i).getPrice()%> $
-                :<%= products.get(i).getQuntity()%>
             <div>
-                <button class="update" onclick="updateProduct(<%= products.get(i).getId() %>)">Update</button>
-                <button class="delete" onclick="deleteProduct(<%= products.get(i).getId() %>)">Delete</button>
-             </div></li>
+                <button id="add-product" onclick="addProduct()">Add Product</button>
+                <button id="add-product" onclick="GetAll()">Get Products</button>
+                <button class="update" onclick="updateProduct()">Update</button>
+                <button class="delete" onclick="deleteProduct()">Delete</button>
+             </div>
         </ul>
-             <% } %>
-        <button id="add-product" onclick="addProduct()">Add Product</button>
+             
+        
     </div>
 
              <script>
                     window.addProduct = function() {
-                        <%! int id =5;%>
-                        //alert(<%= id %>); 
                         <% //response.sendRedirect("welcome.html");value="<%= session.getAttribute("id") %>
-                        window.location.href = 'add.jsp';
+                        window.location.href = '/product/add.jsp';
                         //window.location.assign('https://www.example.com');
                         //window.location.replace('https://www.example.com');
 
                         
                     }
-                    window.updateProduct = function(id) {
-                        window.location.href = 'update.jsp?id='+id; 
+                    window.GetAll = function() {
+                        window.location.href = '/product/getall';
+                    }
+                    
+                    window.updateProduct = function() {
+                        window.location.href = '/product/update.jsp';
                     }
 
-                    window.deleteProduct = function(id) {
-                       window.location.href = 'delete.jsp?id='+id;                               
+                    window.deleteProduct = function() {
+                       window.location.href = '/product/delete.jsp';                          
                     }
 
              </script>

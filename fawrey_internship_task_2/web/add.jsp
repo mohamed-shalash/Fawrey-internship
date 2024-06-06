@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="/product/products" >
+        <form action="/product/add" >
                 Id <input type="text" name="id" /> <br>
                 Name <input type="text" name="name" /> <br>
                 Description <input type="text" name="description" /> <br>
